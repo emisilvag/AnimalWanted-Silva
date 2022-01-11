@@ -1,20 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
 
-
+/* reseteo */
 *{
     margin: 0;        
     padding: 0;
 }
 
+// Variables paleta de colores
+
+$color1: black;
+$color2: darkorange;
+$color3: azure;
+
+// Variables Fuentes
+
+$fuente1: 'Roboto';
+$fuente2: cursive;
+
+// Fin variables
+
 body{
-    background-color: azure
+    background-color: $color3
 } 
 
 /* h2 personalizado */
 h2{
-    color: black;
+    color: $color1;
     font-size: 150%;
-    font-family: 'Roboto', cursive;
+    font-family: $fuente1, cursive;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 20px; 
@@ -22,58 +35,64 @@ h2{
 
 /* h3 personalizado */
 h3{
-    color: black;
+    color: $color1;
     font-size: 250%;
-    font-family: 'Roboto', cursive;
+    font-family: $fuente1, cursive;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 20px;
+
+   
 }
     
 /* texto navegacion */
 a{ 
-    color: black;
-    font-family: 'Roboto', cursive;
+    color: $color1;
+    font-family: $fuente1, cursive;
     font-size: 18px;
     
 }
 
 /* propiedades con mouse */
 a:hover{
-    color:darkorange;
+    color: $color2;
     transition: 0.5s; 
     
   }
 
 /* texto contacto */
 article p{
-    color: black;
-    font-family: 'Roboto', cursive;
+    color: $color1;
+    font-family: $fuente1, cursive;
     text-align: center;
     font-size: 120%;
+
+    span{
+        color: $color2;
+    }
 }
 
 /* texto footer */
 aside{
-    color: black;
-    font-family: 'Roboto', cursive;
+    color: $color1;
+    font-family: $fuente1, cursive;
     text-align: center;
     /* padding: ; */
 }
 
 /* borde imagenes fondo */
 .border1{
-    border: 3px solid darkorange ;
+    border: 3px solid $color2 ;
 }
 
 /* borde casilla contacto */
 .border2{
-    border: darkorange solid 2px;
+    border: $color2 solid 2px;
 }
 
 /* borde nosotros */
 .border3{
-    border: darkorange solid 2px;
+    border: $color2 solid 2px;
     padding: 30px; 
 
 }
@@ -123,6 +142,7 @@ aside{
     padding-top: 50px;
     padding-bottom: 10px;
 }
+
 /* alineacion formulario */
 .cuadroContacto{
     display: flex;
@@ -153,57 +173,57 @@ aside{
 /* items del contenedor */
 
 .item{
-    border: 2px solid darkorange;
+    border: 2px solid $color2;
     min-height: 100px;
     
 
 }
 
 .item1{
-    background-image: url(../imagenesencontrados/imagen1.jpg);
+    background-image: url(../imagenes/imagenesencontrados/imagen1.jpg); 
     background-size: cover;
     background-position: center;
     
 }
 
 .item2{
-    background-image: url(../imagenesencontrados/imagen2.jpg);
+    background-image: url(../imagenes/imagenesencontrados/imagen2.jpg);
     background-size: cover;
     background-position: center;   
 }
 
 .item3{
-    background-image: url(../imagenesencontrados/imagen3.jpg);
+    background-image: url(../imagenes/imagenesencontrados/imagen3.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .item4{
-    background-image: url(../imagenesencontrados/imagen4.jpg);
+    background-image: url(../imagenes/imagenesencontrados/imagen4.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .item5{
-    background-image: url(../imagenesencontrados/imagen5.jpg);
+    background-image: url(../imagenes/imagenesencontrados/imagen5.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .item6{
-    background-image: url(../imagenesencontrados/imagen6.jpg);
+    background-image: url(../imagenes/imagenesencontrados/imagen6.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .item7{
-    background-image: url(../imagenesencontrados/imagen7.jpg);
+    background-image: url(../imagenes/imagenesencontrados/imagen7.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .item8{
-    background-image: url(../imagenesencontrados/imagen8.jpg);
+    background-image: url(../imagenes/imagenesencontrados/imagen8.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -330,7 +350,7 @@ aside{
     }
 }
 
-@media only screen and (min-width: 768px){
+ @media only screen and (min-width: 768px){  
     .item1{  
         grid-column: 1/2;
         grid-row: 1/3;
@@ -370,7 +390,7 @@ aside{
         grid-column: 3/5;
         grid-row: 3/4;
     }
-    /* img fondos responsive */
+    /* img fondos responsive con animacion*/
     .imgback{
         width: 100%;
         display: grid;
@@ -416,8 +436,9 @@ aside{
             opacity: 1;
         }
     }
+
+   
 }
 
 
-
-/* fin media query */
+/* fin media query. */
