@@ -5,6 +5,26 @@
   padding: 0;
 }
 
+a {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
 body {
   background-color: azure;
 }
@@ -12,7 +32,6 @@ body {
 /* h2 personalizado */
 h2 {
   color: black;
-  font-size: 150%;
   font-family: "Roboto", cursive;
   text-align: center;
   padding-top: 30px;
@@ -22,7 +41,14 @@ h2 {
 /* h3 personalizado */
 h3 {
   color: black;
-  font-size: 250%;
+  font-family: "Roboto", cursive;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+h4 {
+  color: black;
   font-family: "Roboto", cursive;
   text-align: center;
   padding-top: 30px;
@@ -33,7 +59,6 @@ h3 {
 a {
   color: black;
   font-family: "Roboto", cursive;
-  font-size: 18px;
 }
 
 /* propiedades con mouse */
@@ -74,9 +99,13 @@ aside {
 }
 
 /* borde nosotros */
-.border3 {
+.border3, .border4 {
   border: darkorange solid 2px;
   padding: 30px;
+}
+
+.border4 {
+  font-size: 24px;
 }
 
 /* barra navegacion */

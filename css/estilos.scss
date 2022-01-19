@@ -19,37 +19,63 @@ $fuente2: cursive;
 
 // Fin variables
 
+// Mapa
+ 
+$headings: (
+    h1: 50px,
+    h2: 24px,
+    h3: 40px,
+    h4: 18px
+);
+
+$h4: map-get($headings, h4);
+
+a {
+    font-size: $h4;    
+}
+
+
+@each $heading, $size in $headings {
+    #{$heading} {
+        font-size: $size;
+    }
+}
+
+// Fin mapa
+
 body{
     background-color: $color3
 } 
 
-/* h2 personalizado */
-h2{
+// Mixin
+@mixin encabezados {
     color: $color1;
-    font-size: 150%;
     font-family: $fuente1, cursive;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 20px; 
 }
 
+/* h2 personalizado */
+h2{
+    @include encabezados;
+}
+
 /* h3 personalizado */
 h3{
-    color: $color1;
-    font-size: 250%;
-    font-family: $fuente1, cursive;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
-
-   
+    @include encabezados;   
 }
+
+h4{
+    @include encabezados;
+}
+
     
 /* texto navegacion */
 a{ 
     color: $color1;
     font-family: $fuente1, cursive;
-    font-size: 18px;
+    // font-size: 18px;
     
 }
 
@@ -94,6 +120,14 @@ aside{
 .border3{
     border: $color2 solid 2px;
     padding: 30px; 
+}
+
+// borde se busca aplicando extend
+$h2: map-get($headings, h2);
+
+.border4{
+    @extend .border3;
+    font-size: $h2;
 
 }
 
