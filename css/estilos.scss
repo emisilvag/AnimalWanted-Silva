@@ -28,12 +28,15 @@ $headings: (
     h4: 18px
 );
 
+// Get map fuente h4 para a
+
 $h4: map-get($headings, h4);
 
 a {
     font-size: $h4;    
 }
 
+// Bucle
 
 @each $heading, $size in $headings {
     #{$heading} {
@@ -43,6 +46,8 @@ a {
 
 // Fin mapa
 
+
+// Color fondo
 body{
     background-color: $color3
 } 
@@ -63,7 +68,7 @@ h2{
 
 /* h3 personalizado */
 h3{
-    @include encabezados;   
+    @include encabezados;  
 }
 
 h4{
@@ -74,17 +79,15 @@ h4{
 /* texto navegacion */
 a{ 
     color: $color1;
-    font-family: $fuente1, cursive;
-    // font-size: 18px;
-    
+    font-family: $fuente1, cursive;   
 }
 
 /* propiedades con mouse */
 a:hover{
     color: $color2;
-    transition: 0.5s; 
-    
+    transition: 0.5s;  
   }
+
 
 /* texto contacto */
 article p{
@@ -103,7 +106,6 @@ aside{
     color: $color1;
     font-family: $fuente1, cursive;
     text-align: center;
-    /* padding: ; */
 }
 
 /* borde imagenes fondo */
@@ -193,7 +195,6 @@ $h2: map-get($headings, h2);
 /* contenedor de imagenes encontrados */
 .container{
     display: grid;
-    /* background-color: grey; */
     grid-template-rows: 200px 200px 200px;
     grid-gap: 10px; 
     padding: 10px;
