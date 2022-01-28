@@ -315,6 +315,13 @@ $h2: map-get($headings, h2);
         font-size: 20px;
         transition: 1s;
     }
+
+    .sec{
+        width: 50%;
+        justify-content: center;
+        margin-left: 25%;
+        padding-top: 50px;
+    }
     
     @keyframes aparecer {
         0%{
@@ -375,6 +382,13 @@ $h2: map-get($headings, h2);
         transition: 1s;
     }
 
+    .sec{
+        width: 50%;
+        justify-content: center;
+        margin-left: 25%;
+        padding-top: 50px;
+    }
+
     @keyframes aparecer {
         0%{
             opacity: 0;
@@ -383,6 +397,8 @@ $h2: map-get($headings, h2);
             opacity: 1;
         }
     }
+    
+        
 }
 
  @media only screen and (min-width: 768px){  
@@ -472,7 +488,19 @@ $h2: map-get($headings, h2);
         }
     }
 
-   
+    .sec{
+        width: 50%;
+        justify-content: center;
+        margin-left: 25%;   
+        padding-top: 50px;         
+    }
+
+   .carousel-inner img{
+       height: 100%;
+       width: 100%;
+       display: flex;
+      
+   }
 }
 
 

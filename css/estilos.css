@@ -85,7 +85,6 @@ aside {
   color: black;
   font-family: "Roboto", cursive;
   text-align: center;
-  /* padding: ; */
 }
 
 /* borde imagenes fondo */
@@ -194,7 +193,6 @@ footer {
 .container {
   display: -ms-grid;
   display: grid;
-  /* background-color: grey; */
   -ms-grid-rows: 200px 200px 200px;
       grid-template-rows: 200px 200px 200px;
   grid-gap: 10px;
@@ -327,6 +325,14 @@ footer {
     -webkit-transition: 1s;
     transition: 1s;
   }
+  .sec {
+    width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 25%;
+    padding-top: 50px;
+  }
   @-webkit-keyframes aparecer {
     0% {
       opacity: 0;
@@ -410,6 +416,14 @@ footer {
     font-size: 20px;
     -webkit-transition: 1s;
     transition: 1s;
+  }
+  .sec {
+    width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 25%;
+    padding-top: 50px;
   }
   @-webkit-keyframes aparecer {
     0% {
@@ -555,6 +569,21 @@ footer {
     100% {
       opacity: 1;
     }
+  }
+  .sec {
+    width: 50%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 25%;
+    padding-top: 50px;
+  }
+  .carousel-inner img {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
