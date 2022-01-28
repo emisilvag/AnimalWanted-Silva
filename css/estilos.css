@@ -326,11 +326,10 @@ footer {
     transition: 1s;
   }
   .sec {
-    width: 50%;
+    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: 25%;
     padding-top: 50px;
   }
   @-webkit-keyframes aparecer {
@@ -418,11 +417,11 @@ footer {
     transition: 1s;
   }
   .sec {
-    width: 50%;
+    width: 80%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: 25%;
+    margin-left: 10%;
     padding-top: 50px;
   }
   @-webkit-keyframes aparecer {
