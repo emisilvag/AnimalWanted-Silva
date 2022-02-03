@@ -440,14 +440,16 @@ $h2: map-get($headings, h2);
         grid-column: 3/5;
         grid-row: 3/4;
     }
+
     /* img fondos responsive con animacion*/
     .imgback{
         width: 100%;
         display: grid;
         animation-duration: 2s;
-        animation-name: aparecer;
+        animation-name: aparecer;     
           
     }
+    
     /* mapa avistamientos */
     .mapa{
         display: flex;
@@ -500,6 +502,7 @@ $h2: map-get($headings, h2);
        display: flex;
       
    }
+
 }
 
 
