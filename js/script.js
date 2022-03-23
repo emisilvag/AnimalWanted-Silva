@@ -33,30 +33,37 @@ const collares = [
     marca: "Unipet Tracked P",
     descripcion: "Collar de rastero Talle P",
     precio: 2000,
-    img: "./img/collarP.jpg",
+    img: "../imagenes/collares/collarP.jpg",
   },
   {
     id: 1,
     marca: "Unipet Tracked S",
     descripcion: "Collar de rastero Talle S",
     precio: 2500,
-    img: "./img/collarS.jpg",
+    img: "../imagenes/collares/collarS.jpg",
   },
   {
     id: 2,
     marca: "Unipet Tracked M",
     descripcion: "Collar de rastero Talle M",
     precio: 3000,
-    img: "./img/collarM.jpg",
+    img: "../imagenes/collares/collarM.jpg",
   },
   {
     id: 3,
     marca: "Unipet Tracked G",
     descripcion: "Collar de rastero Talle G",
     precio: 3500,
-    img: "./img/collarG.jpg",
+    img: "../imagenes/collares/collarG.jpg",
   },
 ];
+
+// Destructuring del array
+const [a0, a1, a2, a3] = collares;
+console.log(a0);
+console.log(a1);
+console.log(a2);
+console.log(a3);
 
 let carrito;
 
@@ -83,6 +90,9 @@ function chequearCarritoEnStorage() {
   // Si no existe ese array en el LS, esta función devolverá un array vacío
   return [];
 }
+
+// verificacion de datos de los articulos
+collares ?? console.log("Collares es null");
 
 // Imprime catálogo de collares en el HTML
 // Recibimos por parámetro el array
@@ -175,7 +185,7 @@ function dibujarTabla(array) {
                 <td>${collar.marca}</td>
                 <td>${collar.cantidad}</td>
                 <td>$${collar.precioTotal}</td>
-                <td><button id="eliminar${collar.id}" type="button" class="btn btn-dark">Eliminar</button></td>
+                <td><button id="eliminar${collar.id}" type="button" class="btn btn-dark"> Eliminar </button> </td>
             </tr>
       `;
 

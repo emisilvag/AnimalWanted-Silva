@@ -98,7 +98,8 @@ aside {
 }
 
 /* borde nosotros */
-.border3, .border4 {
+.border3,
+.border4 {
   border: darkorange solid 2px;
   padding: 30px;
 }
@@ -120,13 +121,13 @@ aside {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 10px;
 }
 
@@ -148,15 +149,15 @@ form {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -174,8 +175,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 /* mapa avistamientos */
@@ -184,8 +185,8 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: auto;
 }
 
@@ -194,7 +195,7 @@ footer {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 200px 200px 200px;
-      grid-template-rows: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
   grid-gap: 10px;
   padding: 10px;
   height: auto;
@@ -262,18 +263,18 @@ footer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: (1fr)[4];
-        grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: (1fr) [4];
+    grid-template-rows: repeat(4, 1fr);
   }
   .imgback {
     width: auto;
     display: -ms-grid;
     display: grid;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-name: aparecer;
-            animation-name: aparecer;
+    animation-name: aparecer;
   }
   .navegador {
     list-style-type: none;
@@ -282,21 +283,21 @@ footer {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .mapa {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: auto;
   }
   .cuadroContacto {
@@ -304,13 +305,13 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: auto;
   }
   .item:hover {
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
     -webkit-transition: 0.9s;
     transition: 0.9s;
     overflow: hidden;
@@ -328,8 +329,8 @@ footer {
   .sec {
     width: 100%;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     padding-top: 50px;
   }
   @-webkit-keyframes aparecer {
@@ -352,19 +353,19 @@ footer {
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .container {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: (150px)[3];
-        grid-template-rows: repeat(3, 150px);
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (150px) [3];
+    grid-template-rows: repeat(3, 150px);
   }
   .imgback {
     width: auto;
     display: -ms-grid;
     display: grid;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-name: aparecer;
-            animation-name: aparecer;
+    animation-name: aparecer;
   }
   .navegador {
     list-style-type: none;
@@ -373,21 +374,21 @@ footer {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .mapa {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: auto;
   }
   .cuadroContacto {
@@ -395,13 +396,13 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: auto;
   }
   .item:hover {
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
     -webkit-transition: 0.9s;
     transition: 0.9s;
     overflow: hidden;
@@ -419,8 +420,8 @@ footer {
   .sec {
     width: 80%;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-left: 10%;
     padding-top: 50px;
   }
@@ -513,9 +514,9 @@ footer {
     display: -ms-grid;
     display: grid;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-name: aparecer;
-            animation-name: aparecer;
+    animation-name: aparecer;
   }
   /* mapa avistamientos */
   .mapa {
@@ -523,8 +524,8 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: auto;
   }
   .cuadroContacto {
@@ -532,13 +533,13 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: auto;
   }
   .item:hover {
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
     -webkit-transition: 0.9s;
     transition: 0.9s;
     overflow: hidden;
@@ -572,8 +573,8 @@ footer {
   .sec {
     width: 50%;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-left: 25%;
     padding-top: 50px;
   }
