@@ -165,7 +165,7 @@ function dibujarTabla(array) {
         <table id="tablaCarrito" class="table">
             <thead>
                 <tr>
-                <th scope="col">#</th>
+                
                     <th scope="col">Item</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">Precio Parcial</th>
@@ -179,14 +179,14 @@ function dibujarTabla(array) {
                     <td> </td>
                     <td> </td>
                 </tr>
-            <tr>    
-                <td> <button id="vaciarCarrito${carrito.id}" type="button" onclick="" class="btn btn-dark"> Vaciar Carrito </button> </td>
-            </tr>
             </tbody>
         </table>
     `;
 
   contenedor.appendChild(tabla);
+
+  let btnVaciar = document.getElementById("btnVaciar");
+  btnVaciar.addEventListener("click", vaciarCarrito);
 
   // Una vez que dibujamos la tabla, obtenemos el id del body de la tabla
   // donde imprimiremos los datos del array
@@ -199,7 +199,7 @@ function dibujarTabla(array) {
                 <td>${collar.marca}</td>
                 <td>${collar.cantidad}</td>
                 <td>$${collar.precioTotal}</td>
-                <td><button id="eliminar${collar.id}" type="button" class="btn btn-dark"> Eliminar </button> </td>
+                <td><button id="eliminar${collar.id}" type="button" class="btn btn-danger me-1"> Eliminar </button> </td>
             </tr>
       `;
 
@@ -285,6 +285,11 @@ function eliminarDelCarrito(id) {
   }
 
   localStorage.setItem("carritoEnStorage", JSON.stringify(carrito));
+  dibujarTabla(carrito);
+}
+
+function vaciarCarrito() {
+  carrito = [];
   dibujarTabla(carrito);
 }
 
