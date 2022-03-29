@@ -69,6 +69,20 @@ let carrito;
 
 // ----- Declaración de funciones ----- //
 
+function bienvenidaSweet() {
+  Swal.fire({
+    title: "BIENVENIDO HUMANO",
+    text: "En esta sección podrás encontrar collares GPS para que puedas ver en tiempo real la ubicación exacta de tu mascota, pero más allá de la utilidad y efectividad de estos dispositivos de rastreo, seamos responsables con nuestras mascotas, evitemos extravios innecesarios. (USO EXCLUSIVAMENTE PARA MASCOTAS, ANIMALWANTED NO SE HACE RESPONSABLE POR EL MAL USO DE ESTOS DISPOSITIVOS)",
+    icon: "info",
+    showCancelButton: true,
+    confirmButtonText: "Estoy de acuerdo 👍",
+    cancelButtonText: "No estoy de acuerdo 👎",
+    imageUrl: "https://miro.medium.com/max/1050/1*0W96bS7rcZSYI530_e0XXQ.png",
+    imageWidth: "250px",
+  });
+}
+bienvenidaSweet();
+
 function chequearCarritoEnStorage() {
   let contenidoEnStorage = JSON.parse(localStorage.getItem("carritoEnStorage"));
   console.table("contenido en chequear Carrito en ls ", contenidoEnStorage);
@@ -160,13 +174,13 @@ function dibujarTabla(array) {
             </thead>
             <tbody id="bodyTabla">
                 <tr>
-                    <td>Total: $${precioTotal}</td>
+                    <td>Total: ${precioTotal}</td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
                 </tr>
-            <tr> 
-                <td> <button id="vaciarCarrito" class="btn btn-dark"> Vaciar Carrito </button> </td>
+            <tr>    
+                <td> <button id="vaciarCarrito${carrito.id}" type="button" onclick="" class="btn btn-dark"> Vaciar Carrito </button> </td>
             </tr>
             </tbody>
         </table>
