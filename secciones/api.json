@@ -1,0 +1,30 @@
+[
+  {
+    "id": 0,
+    "marca": "Unipet Tracked P",
+    "descripcion": "Collar de rastero Talle P",
+    "precio": 2000,
+    "img": "../imagenes/collares/collarP.jpg"
+  },
+  {
+    "id": 1,
+    "marca": "Unipet Tracked S",
+    "descripcion": "Collar de rastero Talle S",
+    "precio": 2500,
+    "img": "../imagenes/collares/collarS.jpg"
+  },
+  {
+    "id": 2,
+    "marca": "Unipet Tracked M",
+    "descripcion": "Collar de rastero Talle M",
+    "precio": 3000,
+    "img": "../imagenes/collares/collarM.jpg"
+  },
+  {
+    "id": 3,
+    "marca": "Unipet Tracked G",
+    "descripcion": "Collar de rastero Talle G",
+    "precio": 3500,
+    "img": "../imagenes/collares/collarG.jpg"
+  }
+]

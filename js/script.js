@@ -27,47 +27,29 @@ class Articulos {
 }
 
 // Constantes y variables
-const collares = [
-  {
-    id: 0,
-    marca: "Unipet Tracked P",
-    descripcion: "Collar de rastero Talle P",
-    precio: 2000,
-    img: "../imagenes/collares/collarP.jpg",
-  },
-  {
-    id: 1,
-    marca: "Unipet Tracked S",
-    descripcion: "Collar de rastero Talle S",
-    precio: 2500,
-    img: "../imagenes/collares/collarS.jpg",
-  },
-  {
-    id: 2,
-    marca: "Unipet Tracked M",
-    descripcion: "Collar de rastero Talle M",
-    precio: 3000,
-    img: "../imagenes/collares/collarM.jpg",
-  },
-  {
-    id: 3,
-    marca: "Unipet Tracked G",
-    descripcion: "Collar de rastero Talle G",
-    precio: 3500,
-    img: "../imagenes/collares/collarG.jpg",
-  },
-];
+let collares = "api.json";
+let arrayCollares = [];
 
 // Destructuring del array
-const [a0, a1, a2, a3] = collares;
-console.log(a0);
-console.log(a1);
-console.log(a2);
-console.log(a3);
+// const [a0, a1, a2, a3] = collares;
+// console.log(a0);
+// console.log(a1);
+// console.log(a2);
+// console.log(a3);
 
 let carrito;
 
 // ----- Declaración de funciones ----- //
+function obtenerDatosDelJson(collares) {
+  fetch(collares)
+    .then((res) => res.json())
+    .then((json) => {
+      arrayCollares = json;
+      imprimirProductosEnHTML(json);
+      carrito = chequearCarritoEnStorage();
+      dibujarTabla(carrito);
+    });
+}
 
 function bienvenidaSweet() {
   Swal.fire({
@@ -242,7 +224,7 @@ function agregarAlCarrito(idProducto) {
     // El collar no se encuentra en el carrito, así que
     // lo pusheamos al array asignándole la clase Articulos
     // para poder acceder a sus métodos
-    carrito.push(new Articulos(collares[idProducto], 1));
+    carrito.push(new Articulos(arrayCollares[idProducto], 1));
   }
 
   // Una vez que actualizamos el carrito, guardamos el carrito actualizado
@@ -288,6 +270,7 @@ function eliminarDelCarrito(id) {
   dibujarTabla(carrito);
 }
 
+// Vaciar carrito
 function vaciarCarrito() {
   carrito = [];
   dibujarTabla(carrito);
@@ -305,9 +288,8 @@ function obtenerPrecioTotal(array) {
 }
 
 // --- Invocación de funciones ---
-imprimirProductosEnHTML(collares);
+//imprimirProductosEnHTML(collares);
 
 // Consulta al Storage para saber si hay información almacenada
 // Si hay datos, se imprimen en el HTML al refrescar la página
-carrito = chequearCarritoEnStorage();
-dibujarTabla(carrito);
+obtenerDatosDelJson(collares);
