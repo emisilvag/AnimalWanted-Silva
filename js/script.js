@@ -30,13 +30,6 @@ class Articulos {
 let collares = "api.json";
 let arrayCollares = [];
 
-// Destructuring del array
-// const [a0, a1, a2, a3] = collares;
-// console.log(a0);
-// console.log(a1);
-// console.log(a2);
-// console.log(a3);
-
 let carrito;
 
 // ----- Declaración de funciones ----- //
@@ -102,7 +95,7 @@ function imprimirProductosEnHTML(collares) {
     let card = document.createElement("div");
 
     // Agregamos el contenido a la card
-    // Esto es con clases de bootstrap
+    // Se utilizan clases de bootstrap
     card.innerHTML = `
         <div class="card text-center" style="width: 18rem;">
             <div class="card-body">
@@ -147,11 +140,10 @@ function dibujarTabla(array) {
         <table id="tablaCarrito" class="table">
             <thead>
                 <tr>
-                
-                    <th scope="col">Item</th>
+                    <th scope="col">Articulo</th>
+                    <th scope="col">Talle</th>
                     <th scope="col">Cantidad</th>
                     <th scope="col">Precio Parcial</th>
-                    <th scope="col">Accion</th>
                 </tr>
             </thead>
             <tbody id="bodyTabla">
@@ -181,7 +173,7 @@ function dibujarTabla(array) {
                 <td>${collar.marca}</td>
                 <td>${collar.cantidad}</td>
                 <td>$${collar.precioTotal}</td>
-                <td><button id="eliminar${collar.id}" type="button" class="btn btn-danger me-1"> Eliminar </button> </td>
+                <td><button id="eliminar${collar.id}" type="button" class="btn btn-warning"> Eliminar </button> </td>
             </tr>
       `;
 
